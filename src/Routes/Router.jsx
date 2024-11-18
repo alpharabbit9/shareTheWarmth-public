@@ -1,6 +1,8 @@
 import { createBrowserRouter } from "react-router-dom";
 import Home from "../Layouts/Home";
 import Root from "../Layouts/Root";
+import DonationPage from "../Layouts/DonationPage";
+import DonationDetail from "../Pages/DonationDetail";
 
 
 const Router = createBrowserRouter([
@@ -14,7 +16,27 @@ const Router = createBrowserRouter([
             },
             {
                 path: 'donationCampaignPage',
-                element: <h1>Donation Campaign Page</h1>
+                element: <DonationPage></DonationPage>,
+                loader: async () => {
+                    const response = await fetch('donation.json'); 
+                    if (!response.ok) {
+                        throw new Error('Failed to load donation data');
+                    }
+                    return response.json(); 
+                }
+                
+            },
+            {
+                path:':id',
+                element:<DonationDetail></DonationDetail>,
+                loader: async () => {
+                    const response = await fetch('donation.json'); 
+                    if (!response.ok) {
+                        throw new Error('Failed to load donation data');
+                    }
+                    return response.json(); 
+                }
+
             },
             {
                 path: "dashboard",

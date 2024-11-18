@@ -9,7 +9,7 @@ const About = () => {
                     <img className="w-full max-w-lg md:max-w-lg rounded-3xl" src={img} alt="Volunteers in Sylhet tea garden" />
                 </div>
                 <div className="flex-1">
-                    <p className="text-justify font-normal text-gray-600">
+                    <p className="text-justify font-normal text-white">
                         Welcome to the Winter Clothing Donation platform, a community-driven initiative dedicated to spreading warmth and hope across Bangladesh. Our mission is simple yet powerful: to ensure that no one has to endure the harsh winter without adequate clothing.
                         <br /><br />
                         When the cold season arrives, thousands of individuals in rural and low-income areas face immense challenges due to a lack of warm clothing. This platform bridges the gap between those willing to give and those in desperate need.

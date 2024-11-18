@@ -1,0 +1,30 @@
+.background {
+    position: relative;
+    background-image: url('../assets/bg-image/73e5cb1fc1641cbcb62dd004e18ff6ab.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh; 
+    width: 100%; 
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    color: white; 
+}
+
+.background::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9); 
+    z-index: 1;
+}
+
+.background-content {
+    position: relative;
+    z-index: 2; 
+    text-align: center; 
+}

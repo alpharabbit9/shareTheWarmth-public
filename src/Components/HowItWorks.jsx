@@ -1,12 +1,12 @@
 const HowItWorks = () => {
     return (
-        <div className="p-6 bg-gray-100">
+        <div className="p-6 ">
             <h2 className="text-4xl font-bold text-center text-[#D72050] mb-6">How It Works</h2>
             <div className="max-w-4xl mx-auto space-y-6">
-                {/* Step 1: Instructions */}
+                
                 <div>
-                    <h3 className="text-2xl font-semibold text-gray-800 mb-2">Instructions for Donation</h3>
-                    <p className="text-gray-700 leading-relaxed">
+                    <h3 className="text-2xl font-semibold text-white mb-2">Instructions for Donation</h3>
+                    <p className="text-white leading-relaxed">
                         Donating warm clothes through our platform is simple:
                         <ul className="list-disc pl-6 mt-2">
                             <li>Log in to your account or create a new one.</li>
@@ -18,10 +18,10 @@ const HowItWorks = () => {
                     </p>
                 </div>
 
-                {/* Step 2: Collection Points */}
+               
                 <div>
-                    <h3 className="text-2xl font-semibold text-gray-800 mb-2">Collection Points</h3>
-                    <p className="text-gray-700 leading-relaxed">
+                    <h3 className="text-2xl font-semibold text-white mb-2">Collection Points</h3>
+                    <p className="text-white leading-relaxed">
                         You can drop off your donations at any of our convenient collection points:
                         <ul className="list-disc pl-6 mt-2">
                             <li>Dhaka: Dhanmondi Community Center</li>
@@ -33,10 +33,10 @@ const HowItWorks = () => {
                     </p>
                 </div>
 
-                {/* Step 3: Supported Divisions */}
+              
                 <div>
-                    <h3 className="text-2xl font-semibold text-gray-800 mb-2">Supported Divisions</h3>
-                    <p className="text-gray-700 leading-relaxed">
+                    <h3 className="text-2xl font-semibold text-white mb-2">Supported Divisions</h3>
+                    <p className="text-white leading-relaxed">
                         Our donation drives currently support the following divisions in Bangladesh:
                         <ul className="list-disc pl-6 mt-2">
                             <li>Dhaka</li>

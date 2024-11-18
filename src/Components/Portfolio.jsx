@@ -15,28 +15,28 @@ const Portfolio = () => {
                         Donating to SPAR’s Winter appeal Special program is a meaningful way to make a positive change in the lives of those who are most helpless during the winter months. Your donate clothes to homeless brings warmth, comfort, and hope to those who need them most.
                     </p>
 
-                    <div className="stats bg-base-200 text-gray-800 p-4 rounded-lg">
-                        {/* Total Donations */}
+                    <div className="stats bg-black text-white p-4 rounded-lg">
+                       
                         <div className="stat">
-                            <div className="stat-title">Total Donations</div>
+                            <div className="stat-title text-white">Total Donations</div>
                             <div className="stat-value">12,345 Items</div>
                             <div className="stat-actions">
                                 <button className="btn btn-sm btn-success">Contribute Now</button>
                             </div>
                         </div>
 
-                        {/* Campaigns */}
+                        
                         <div className="stat">
-                            <div className="stat-title">Active Campaigns</div>
+                            <div className="stat-titleb text-white">Active Campaigns</div>
                             <div className="stat-value">8 Campaigns</div>
                             <div className="stat-actions">
                                 <button className="btn btn-sm btn-secondary">View Campaigns</button>
                             </div>
                         </div>
 
-                        {/* Volunteers */}
+                     
                         <div className="stat">
-                            <div className="stat-title">Active Volunteers</div>
+                            <div className="stat-title text-white">Active Volunteers</div>
                             <div className="stat-value">450+ Volunteers</div>
                             <div className="stat-actions">
                                 <button className="btn btn-sm btn-info">Join Us</button>

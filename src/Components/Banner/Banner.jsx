@@ -4,7 +4,7 @@ import tPic from '../../assets/DALL·E 2024-11-18 02.08.17 - An artistic website
 import './Banner.css'
 const Banner = () => {
     return (
-        <div className='banner h-screen rounded-3xl'>
+        <div className='banner h-screen '>
             
         </div>
     );

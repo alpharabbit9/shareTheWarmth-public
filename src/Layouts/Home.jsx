@@ -6,8 +6,8 @@ import Portfolio from "../Components/portfolio";
 
 const Home = () => {
     return (
-        <div className="bg-gray-100">
-            <header className="w-11/12 mx-auto mb-3">
+        <div className="bg-black text-white">
+            <header className="mb-3">
                 <Banner></Banner>
             </header>
 
@@ -19,7 +19,7 @@ const Home = () => {
                 <HowItWorks></HowItWorks>
             </section>
 
-            <section className="mx-auto w-11/12 mb-3">
+            <section className="mx-auto w-11/12 ">
                 <Portfolio></Portfolio>
             </section>
             <main></main>
