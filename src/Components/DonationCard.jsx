@@ -4,7 +4,7 @@ const DonationCard = ({donation}) => {
 
     const {title,image,description,id} = donation ;
     return (
-        <div className="card card-compact bg-base-100 w-96 shadow-xl">
+        <div className="card card-compact  w-96 shadow-xl">
   <figure>
     <img className="w-full h-48 object-cover"
       src={image}
@@ -14,7 +14,7 @@ const DonationCard = ({donation}) => {
     <h2 className="card-title">{title}</h2>
     <p>{description}</p>
     <div className="card-actions justify-end">
-      <Link to={`/${id}`} className="btn btn-primary">Donate Now</Link>
+      <Link to={`/${id}`} className="btn text-white rounded-3xl bg-red-700">Donate Now</Link>
     </div>
   </div>
 </div>

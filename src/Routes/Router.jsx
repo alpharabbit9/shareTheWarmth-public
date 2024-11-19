@@ -3,6 +3,9 @@ import Home from "../Layouts/Home";
 import Root from "../Layouts/Root";
 import DonationPage from "../Layouts/DonationPage";
 import DonationDetail from "../Pages/DonationDetail";
+import Login from "../Pages/Login/Login";
+import Register from "../Pages/Register/Register";
+
 
 
 const Router = createBrowserRouter([
@@ -46,6 +49,14 @@ const Router = createBrowserRouter([
                 path: 'help',
                 element: <h1>How to help</h1>
             },
+            {
+                path:'login',
+                element:<Login></Login>
+            },
+            {
+                path:'register',
+                element:<Register></Register>
+            }
         ]
     },
     {

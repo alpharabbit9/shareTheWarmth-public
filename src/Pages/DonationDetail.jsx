@@ -1,9 +1,16 @@
 import { useParams, useLoaderData } from "react-router-dom";
 import './DonationDetail.css';
+import { toast } from "react-toastify";
 
 const DonationDetail = () => {
     const { id } = useParams();
     const donationData = useLoaderData();
+
+    const HandleDonate = () => {
+        toast.success("Donation Successful", {
+            position: "top-center"
+          });
+    }
 
 
     const selectedCampaign = donationData.find(donation => donation.id.toString() === id);
@@ -55,10 +62,7 @@ const DonationDetail = () => {
                             placeholder="Additional notes (optional)"
                             className="input input-bordered input-primary w-96 mt-2 mb-2 py-2 l max-w-none rounded-3xl bg-gray-800" />
                         <br />
-                        <input
-                            type="submit"
-                            placeholder=""
-                            className="input bg-[#D72050] input-bordered input-primary w-96 mt-2 mb-2 py-2 l max-w-none rounded-3xl " />
+                        <button onClick={HandleDonate} className="btn  bg-[#D72050]  text-white w-96 mt-2 mb-2 py-2 l max-w-none rounded-3xl ">Donate Now</button>
                     </div>
                 </div>
             </section>

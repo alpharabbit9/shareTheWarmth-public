@@ -5,10 +5,14 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        poppins: ['Poppins', 'sans-serif'], // Add Poppins font
+        dancing: ['Dancing Script', 'cursive'], // Add Dancing Script font
+      },
+    },
   },
   plugins: [
     require('daisyui'),
   ],
 }
-

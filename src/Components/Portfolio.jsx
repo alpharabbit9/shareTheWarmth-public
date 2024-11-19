@@ -27,7 +27,7 @@ const Portfolio = () => {
 
                         
                         <div className="stat">
-                            <div className="stat-titleb text-white">Active Campaigns</div>
+                            <div className="stat-title text-white">Active Campaigns</div>
                             <div className="stat-value">8 Campaigns</div>
                             <div className="stat-actions">
                                 <button className="btn btn-sm btn-secondary">View Campaigns</button>
