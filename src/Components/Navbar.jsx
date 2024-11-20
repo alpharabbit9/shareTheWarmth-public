@@ -1,13 +1,30 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link, NavLink } from 'react-router-dom';
+import { AuthContext } from '../Provider/AuthProvider';
+import userImg from '../assets/bg-image/user.png'
+import { signOut } from 'firebase/auth';
 
 const Navbar = () => {
+
+  const {user , userLogOut} = useContext(AuthContext) ;
+  
+  const HandleLogout = () => {
+    userLogOut()
+    .then(result =>{
+      console.log('Successfully logged out')
+    })
+    .catch(error =>
+    console.log("ERROR")
+    )
+  }
 
     const links = <>
     <li><NavLink to ={'/'} >Home</NavLink></li>
     <li><NavLink to ={'/donationCampaignPage'} >Donation Campaign Page</NavLink></li>
     <li><NavLink to ={'/dashboard'} >Dashboard</NavLink></li>
     <li><NavLink to ={'/help'} >How to get Help</NavLink></li>
+
+    
     
     </>
     return (
@@ -42,7 +59,17 @@ const Navbar = () => {
     </ul>
   </div>
   <div className="navbar-end">
-    <Link to={'/login'} className="btn bg-[#D72050] text-white">login</Link>
+    {
+      user && user?.email ? 
+      <>
+
+      <img src={userImg} className='rounded-full' mr-2 alt="img" />
+      <button onClick={HandleLogout} className="btn bg-[#D72050] text-white">Logout</button>
+
+      </>
+      :
+      <Link to={'/login'} className="btn bg-[#D72050] text-white">login</Link>
+    }
   </div>
 </div>
     );
