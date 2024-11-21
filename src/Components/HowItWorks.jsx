@@ -2,7 +2,7 @@ const HowItWorks = () => {
     return (
         <div className="p-6 ">
             <h2 className="text-4xl font-bold text-center text-[#D72050] mb-6">How It Works</h2>
-            <div className="max-w-4xl mx-auto space-y-6">
+            <div className="max-w-4xl mx-auto space-y-6 bg-[#181818] p-8 rounded-3xl">
                 
                 <div>
                     <h3 className="text-2xl font-semibold text-white mb-2">Instructions for Donation</h3>
