@@ -3,12 +3,15 @@ import { Link, useNavigate } from 'react-router-dom';
 import { FcGoogle } from 'react-icons/fc';
 import { AuthContext } from '../../Provider/AuthProvider';
 import { toast } from 'react-toastify';
+import { FaEye, FaEyeSlash } from 'react-icons/fa';
 
 const Register = () => {
 
-    const { createUser, setUser, createGoogleUser } = useContext(AuthContext);
+    const { createUser, setUser, createGoogleUser ,updateUserProfile} = useContext(AuthContext);
 
     const [ErrorMessage, setErrorMessage] = useState(null);
+
+    const [ showPassword , setShowPassword] = useState(false);
 
     const navigate = useNavigate();
 
@@ -18,12 +21,12 @@ const Register = () => {
 
         createGoogleUser()
             .then(result => {
-                console.log(result.user);
+                // console.log(result.user);
                 setUser(result.user)
                 navigate(location?.state ? location.state : "/")
             })
             .catch(error => {
-                console.log('ERROR', error.message)
+                // console.log('ERROR', error.message)
                 setErrorMessage(error.message)
             })
     }
@@ -38,7 +41,7 @@ const Register = () => {
         const email = e.target.email.value;
         const password = e.target.password.value;
 
-        console.log(email, name, password);
+        // console.log(email, name, password);
 
 
 
@@ -64,8 +67,15 @@ const Register = () => {
 
         createUser(email, password)
             .then(result => {
-                console.log(result.user);
+                // console.log(result.user);
                 setUser(result.user)
+                updateUserProfile({displayName : name , photoURL : photo})
+                .then(() =>{
+                    navigate('/dashboard');
+                })
+                .catch(error =>{
+                    console.log(error.message)
+                })
                 toast.success("Congratulation ! Account created successfully", {
                     position: "top-center"
                 });
@@ -106,13 +116,22 @@ const Register = () => {
                                 name='email'
                                 type="email" placeholder="email" className="input input-bordered rounded-3xl text-black" required />
                         </div>
-                        <div className="form-control">
+                        <div className="form-control relative">
                             <label className="label">
                                 <span className="label-text text-white">Password</span>
                             </label>
                             <input
                                 name='password'
-                                type="password" placeholder="password" className="input input-bordered rounded-3xl text-black" required />
+                                type={showPassword ? 'text' : 'password'}
+                                 placeholder="password" className="input input-bordered rounded-3xl text-black" required />
+                                <button
+                                onClick={() => setShowPassword(!showPassword)}
+                                className='btn btn-xs absolute right-4 top-12'>
+
+                                    {
+                                        showPassword ? <FaEyeSlash></FaEyeSlash> :<FaEye></FaEye>
+                                    }
+                                </button>
 
                         </div>
                         <div className="form-control mt-6">

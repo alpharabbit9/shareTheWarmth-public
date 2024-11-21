@@ -51,7 +51,7 @@ const Navbar = () => {
         {links}
       </ul>
     </div>
-    <a className="btn btn-ghost text-2xl text-white font-dancing">ShareTheWarmth</a>
+    <Link to = {'/'} className="btn btn-ghost text-2xl text-white font-dancing">ShareTheWarmth</Link>
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1">
@@ -63,7 +63,7 @@ const Navbar = () => {
       user && user?.email ? 
       <>
 
-      <img src={userImg} className='rounded-full' mr-2 alt="img" />
+      <Link to={'/dashboard'}><img src={user?.photoURL} className='rounded-full w-10 mr-3 '  alt="img" /></Link>
       <button onClick={HandleLogout} className="btn bg-[#D72050] text-white">Logout</button>
 
       </>

@@ -6,7 +6,13 @@ import DonationDetail from "../Pages/DonationDetail";
 import Login from "../Pages/Login/Login";
 import Register from "../Pages/Register/Register";
 import PrivateRoutes from "./PrivateRoutes";
-import Dashboard from "../Pages/Dashboard";
+
+import ErrorPage from "../Pages/ErrorPage";
+import Dashboard from "../Pages/Dashboard/Dashboard";
+import UpdateProfile from "../Components/Update/UpdateProfile";
+import ForgotPass from "../Components/ForgotPass";
+import HowToGetHelp from "../Components/HowToGetHelp";
+
 
 
 
@@ -53,7 +59,7 @@ const Router = createBrowserRouter([
             },
             {
                 path: 'help',
-                element: <h1>How to help</h1>
+                element: <HowToGetHelp></HowToGetHelp>
             },
             {
                 path: 'login',
@@ -62,12 +68,23 @@ const Router = createBrowserRouter([
             {
                 path: 'register',
                 element: <Register></Register>
+            },
+
+            {
+                path:'updateProfile',
+                element:<PrivateRoutes>
+                    <UpdateProfile></UpdateProfile>
+                </PrivateRoutes>
+            },
+            {
+                path:'forgot',
+                element:<ForgotPass></ForgotPass>
             }
         ]
     },
     {
         path: '*',
-        element: <h1>Error</h1>
+        element: <ErrorPage></ErrorPage>
     }
 ])
 

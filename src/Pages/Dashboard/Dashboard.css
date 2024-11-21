@@ -1,0 +1,14 @@
+.back{
+    background: linear-gradient(135deg, #1f2937, #4b5563, #ffffff);
+
+
+}
+
+.banner-text {
+    color: #ffffff; /* Pure white for excellent contrast */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Subtle shadow for depth */
+    font-size: 2rem; /* Adjust size as needed */
+    font-weight: bold; /* Make the text stand out */
+    text-align: center; /* Center the text */
+  }
+  

@@ -3,7 +3,7 @@ import img from '../assets/DALL·E 2024-11-17 23.50.48 - An illustration of volu
 const About = () => {
     return (
         <div className="p-4">
-            <h2 className="text-4xl font-bold text-[#D72050] text-center mb-6">About Us</h2>
+            <h2 className="text-4xl font-bold text-[#D72050] text-center mb-6 animate__animated animate__bounceIn">About Us</h2>
             <div className="flex flex-col md:flex-row justify-between items-center gap-2">
                 <div className="flex-1 flex justify-center">
                     <img className="w-full max-w-lg md:max-w-lg rounded-3xl" src={img} alt="Volunteers in Sylhet tea garden" />

@@ -17,12 +17,12 @@ const Login = () => {
         
         createGoogleUser()
         .then(result => {
-            console.log(result.user);
+            // console.log(result.user);
             setUser(result.user)
             navigate(location?.state ? location.state : "/")
         })
         .catch(error =>{
-            console.log('ERROR',error.message)
+            // console.log('ERROR',error.message)
             setErrorMessage(error.message)
         })
     }
@@ -40,19 +40,19 @@ const Login = () => {
         const email = e.target.email.value;
         const password = e.target.password.value;
 
-        console.log(email,password);
+        // console.log(email,password);
 
         setErrorMessage('')
 
         UserLogIn(email,password)
         .then(result => {
-            console.log(result.user);
+            // console.log(result.user);
             setUser(result.user);
             navigate(location?.state ? location.state : "/")
 
         })
         .catch(error =>{
-            console.log('ERROR' , error.message);
+            // console.log('ERROR' , error.message);
             setErrorMessage(error.message);
         })
 
@@ -78,7 +78,7 @@ const Login = () => {
                             </label>
                             <input type="password" name='password' placeholder="password" className="input input-bordered rounded-3xl text-black" required />
                             <label className="label">
-                                <a href="#" className="label-text-alt link link-hover text-white">Forgot password?</a>
+                                <Link to  = {'/forgot'} href="#" className="label-text-alt link link-hover text-white">Forgot password?</Link>
                             </label>
                         </div>
                         <div className="form-control mt-6">

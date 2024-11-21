@@ -3,7 +3,7 @@ import DonationCard from '../Components/DonationCard';
 
 const DonationPage = () => {
     const Donations = useLoaderData();
-    console.log(Donations);
+    // console.log(Donations);
 
     return (
         <div className="mx-auto px-8 bg-black text-white min-h-screen py-8">

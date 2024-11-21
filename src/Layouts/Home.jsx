@@ -11,7 +11,7 @@ const Home = () => {
                 <Banner></Banner>
             </header>
 
-            <section className="mx-auto w-11/12 mb-3">
+            <section className="mx-auto w-11/12 mb-3 animate__animated animate__bounceIn">
                 <About></About>
             </section>
 
